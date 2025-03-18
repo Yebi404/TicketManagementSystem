@@ -9,14 +9,16 @@ public class Ticket {
     private String status;
     private LocalDateTime createdDate;
     private LocalDateTime resolvedDate;
+    private int createdBy;
 
-    public Ticket(int ticketId, String title, String description, String status, LocalDateTime createdDate, LocalDateTime resolvedDate) {
+    public Ticket(int ticketId,int createdBy, String title, String description, String status, LocalDateTime createdDate, LocalDateTime resolvedDate) {
         this.ticketId = ticketId;
         this.title = title;
         this.description = description;
         this.status = status;
         this.createdDate = createdDate;
         this.resolvedDate = resolvedDate;
+        this.createdBy = createdBy;
     }
 
     public int getTicketId() {
@@ -65,5 +67,13 @@ public class Ticket {
 
     public void setResolvedDate(LocalDateTime resolvedDate) {
         this.resolvedDate = resolvedDate;
+    }
+
+    public int getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(int createdBy) {
+        this.createdBy = createdBy;
     }
 }
